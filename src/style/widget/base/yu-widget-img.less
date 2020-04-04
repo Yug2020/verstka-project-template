@@ -1,0 +1,170 @@
+/* как вызывать стиль
+	.yu-widget-img{
+		.yu-widget-img();
+	}	
+*/
+/*
+например 
+ #section-N .column .yu-widget-img{
+		.yu-widget-img();
+		и что еще надо
+	} 
+
+*/
+
+/*
+@import "@{path-var}/variable.less";
+@import "@{path-var}/color.less";
+@import "@{path-mixin}/parent-inherit.less";
+*/
+
+//* Карточка состоит из  img -H - p */
+//* 25.03.2020 */
+//* emmet */
+/* (c{ yu-widget-img }+.yu-widget.yu-widget-img-$>nr+img[src="img/img.png"])*2 */
+
+/* ELEMENT */
+.yu-widget-img(){
+.default-perents();	/*?*//* parent-inherit.less */
+
+    display: flex;
+    /* display: block; */
+    /* flex-flow: row wrap; */
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    flex: 1 1 100%;
+/* default */	
+	img{
+	.default-perents();	/* parent-inherit.less */
+		/*width:100vw;/**/
+		width:100%;/**/
+		/*max-width:auto;/**/
+		height:auto;
+		object-fit:scale-down;
+	}
+
+/* разные свойства*/	
+	&.cover{
+		.cover();
+	}
+	
+	
+	
+			/* @MEDIA*/
+			@media only screen and (max-width:319px){
+				&.full-screen-mobile{
+					width:100%;
+						img{
+							width:100vw;
+						}
+				}					
+			}
+
+			@media only screen and (min-width:320px){
+				&.full-screen-mobile{
+					width:100%;
+						img{
+							width:100vw;
+						}
+				}	
+			}
+
+
+			@media only screen and (min-width:768px){
+					
+			}			
+			
+			@media only screen and (min-width:994px){
+				&.full-screen-mobile{
+					width:100%;
+					justify-content:left;/**/
+						img{
+							    max-width: 100%;
+						}
+					}	
+				
+				/* right */	
+				&.responsible-right-desktop{
+					width:100%;
+					justify-content:left;
+						img{
+							min-width:48vw;/*-padding*/
+						}
+				}
+				
+				/* left */	
+				&.responsible-left-desktop{
+					width:100%;
+					justify-content:left;
+						img{
+							min-width:48vw;/*-padding*/
+						}
+				}
+					
+			}
+
+			@media only screen and (min-width:1024px){
+			    height: 10px;/*для чего то нужно */
+					&.full-screen-mobile{
+					width:100%;
+					/*justify-content:left;/**/
+						img{
+							width:100%;
+						}
+					}
+					
+									
+					&.responsible-right-desktop{
+					width:100%;
+					justify-content:left;
+						img{
+							width:48vw;/* -padding*/
+						}
+					}
+					
+					/* left */	
+					&.responsible-left-desktop{
+						width:100%;
+						justify-content:flex-end;/**/
+							img{
+								min-width:48vw;/*-padding*/
+							}
+					}
+			}
+
+			@media only screen and (min-width:1440px){
+					&.responsible-right-desktop{
+						img{
+							object-fit: contain;
+							object-position: left;
+							height: 100%;
+							width: auto;
+						}
+					}
+					
+					/* left */	
+					&.responsible-left-desktop{
+						img{
+							object-fit: contain;
+							object-position: right;
+							height: 100%;
+							width: auto;
+						}
+					}
+			}	
+	
+	
+}
+
+/* FUNCTION */
+/* mixin */
+.cover(){
+	img{
+		width:100vw; 
+		/*max-width:auto;/**/
+		height:auto;
+		object-fit:cover;
+	}
+}
+

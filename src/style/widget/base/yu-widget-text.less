@@ -1,0 +1,134 @@
+/* как вызывать стиль
+	.yu-widget-card{
+		.yu-widget-card();
+	}	
+*/
+/*
+например 
+ #section-N .column .yu-widget-text{
+		.yu-widget-text();
+		и что еще надо
+	} 
+
+*/	
+
+/*
+@import "@{path-var}/variable.less";
+@import "@{path-var}/color.less";
+@import "@{path-mixin}/parent-inherit.less";
+*/
+
+//* Карточка состоит из   - p */
+//* 25.03.2020 */
+//* emmet */
+//* c{ yu-widget-text }+.yu-widget-text>p(lorem35) */
+    
+/* ELEMENT */
+.yu-widget-text(){
+.default-perents();	/* mixin.less */
+/* Color text */		
+	span.blue{
+			.blue();
+			    
+		}	
+		
+		
+	span.black{
+			.black();
+		}	
+		
+	span.white{
+			.blue();
+		}
+	
+/* Color BG */	
+	span.bg-white{
+			.bg-white();
+		}
+		
+/* font-weight */
+	span.bold{
+			.bold();
+		}		
+/* ELEMENT  */		
+		a.button-read{
+			.button-read();
+		}
+		
+		/* @MEDIA*/
+			@media only screen and (max-width:319px){
+				text-align: left;
+			}
+
+			@media only screen and (min-width:320px){
+					margin-top: 5px;
+					margin-bottom: 40px;
+			}
+			
+			@media only screen and (min-width:375px){
+					text-align: justify;
+			}
+
+
+			@media only screen and (min-width:768px){
+					
+			}
+
+			@media only screen and (min-width:1024px){
+
+			}
+
+			@media only screen and (min-width:1440px){
+					
+			}
+}
+
+/* FUNCTION */
+/* mixin */
+/* со скобками получается функция */
+	.bold(){
+		font-weight: 700;
+		font-size: inherit;
+		background-color: inherit;
+	}
+	/* color text */
+	
+	.blue(){
+		.default-perents();/* mixin.less */
+		color:@blue-text-dark;// #005ca9;
+
+	}
+	.black(){
+		.default-perents();/* mixin.less */
+		color:@black;/**/ 
+	}
+	.white(){
+		.default-perents();/* mixin.less */
+		color:@white;
+
+	}
+
+
+/* Color BG */
+	.bg-white(){
+		background-color:@white;/**/
+	}
+	
+	
+/*****************************/
+/* Color */
+@blue-menu:#11679b;
+@blue:#11679b;
+
+@blue-text-dark:#005ca9;
+@blue-note:rgba(0,91,169,0.65);
+@white:#fff;
+@black:#000;
+@green:#009706;
+@color-text:#000;
+@green-button:#40c381;
+
+@bg-grey:#f8f9fd;
+@grey:#b1b1b1;
+@yellow:#ffc000;/**/
+/*@yellow-button:#ffb400;/**/

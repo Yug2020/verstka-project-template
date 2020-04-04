@@ -1,0 +1,40 @@
+/* как вызывать стиль
+	.yu-widget-container{
+		.yu-widget-container();
+	}	
+*/
+/*
+например 
+ #section-N .column .yu-widget-container{
+		.yu-widget-container();
+		и что еще надо
+	} 
+
+*/	
+	
+/*
+@import "@{path-var}/variable.less";
+@import "@{path-var}/color.less";
+@import "@{path-mixin}/parent-inherit.less";
+*/
+
+//* Карточка состоит из  img -H - p */
+//* 25.03.2020 */
+//* emmet */
+//* (c{ yu-widget-container }+.yu-widget.yu-widget-container-$)*3 */
+.yu-widget-container(){
+//* MIXIN Default */
+.default-perents();/* parent-inherit.less ???*/
+//* variable */
+	@color-text:@black;
+	@bg-color:@white;
+//*default Parent*/
+	display:flex;
+	flex-flow:row wrap;
+	flex:1 1 350px;
+
+//*default child */
+
+		/*media */
+	
+}

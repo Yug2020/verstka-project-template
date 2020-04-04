@@ -1,0 +1,39 @@
+@import "../@{path-var}/variable.less";
+@import "../@{path-mixin}/parent-inherit.less";
+/* MEDIA */
+.yu-content(){
+/* default */
+	.default-content();/*yu-default.less*/
+	.default-perents();/* parent-inherit.less */
+	
+	& when (@debug=1) {
+		background-color:#8a8a7b;
+	}	
+		
+		/* @MEDIA*/
+		@media only screen and (max-width:319px){
+				padding-left: @otsup-mobile;
+				padding-right: @otsup-mobile;
+		}
+
+		@media only screen and (min-width:320px){
+				padding-left: @otsup-mobile;
+				padding-right: @otsup-mobile;
+		}
+
+
+		@media only screen and (min-width:768px){
+				padding-left: @otsup-pad;
+				padding-right: @otsup-pad;
+		}
+
+		@media only screen and (min-width:1024px){
+				padding-left: @otsup-desktop;
+				padding-right: @otsup-desktop;
+		}
+
+		@media only screen and (min-width:1440px){
+
+		}
+
+}/* yu-content */

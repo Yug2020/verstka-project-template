@@ -1,0 +1,53 @@
+/* как вызывать стиль
+	.yu-widget-card{
+		.yu-widget-card();
+	}	
+*/
+/*
+например 
+ #section-N .column .yu-widget-button{
+		.yu-widget-button();
+		и что еще надо
+	} 
+
+*/	
+	/*  НЕ Изменять H1..H5 DIV и т.д.*/
+/*
+@import "@{path-var}/variable.less";
+@import "@{path-var}/color.less";
+@import "@{path-mixin}/parent-inherit.less";
+*/
+
+//* Карточка состоит из  a -img -span */
+//* 27.03.2020 */
+//* emmet */
+//* (c{ yu-widget-button }+.yu-widget.yu-widget-button>nr+a[href="#" class="yu-button"](lorem1))*2 */
+
+.yu-widget-button(){
+//* MIXIN Default */
+
+//* variable */
+	@color-text:@black;
+	@bg-color:@white;
+	
+//*default Parent*/
+	display:flex;
+	flex-flow:column nowrap;
+	
+
+
+//*default child */
+		.yu-button{
+			.default-perents();/*parent-inherit*/
+			flex-flow:row wrap;
+				img{
+					flex:1 1 auto;
+					min-width:16px;
+					height:auto;
+					max-width:30px;
+				}
+				
+		}
+		/*media */
+	
+}

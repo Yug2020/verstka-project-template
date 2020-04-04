@@ -1,0 +1,13 @@
+<NotepadPlus>
+    <Project name="yu-theme">
+        <Folder name="Build" />
+        <Folder name="src">
+            <File name="C:\! JOB IT\! Verstka\Template\min\src\style\style.less" />
+            <Folder name="var">
+                <File name="C:\! JOB IT\! Verstka\Template\min\src\style\_color.less" />
+                <File name="C:\! JOB IT\! Verstka\Template\min\src\style\_variable.less" />
+            </Folder>
+            <Folder name="mixin" />
+        </Folder>
+    </Project>
+</NotepadPlus>

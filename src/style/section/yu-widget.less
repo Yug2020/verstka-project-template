@@ -1,0 +1,50 @@
+/*
+@import "../@{path-var}/variable.less";
+@import "../@{path-mixin}/parent-inherit.less";
+*/
+/* Отвечает за отступы виджета */
+/* MEDIA */
+.yu-widget(){
+/* default */	
+	.default-widget();/*style.less*/
+	.default-perents();/* mixin.less */
+	/*margin-top:20px;
+	margin-bottom:20px;/**/
+	& when (@debug=1) {
+		background-color:#ff00bf;
+	}	
+	/* set default */
+	*{
+		& when (@debug=1) {
+			background-color:#ffff26;
+		}	
+	}
+			/* @MEDIA*/
+			@media only screen and (max-width:319px){
+				/* margin,padding:top bottom менять*/
+				    margin-top: 5px;
+					margin-bottom: 40px;
+					
+			}
+
+			@media only screen and (min-width:320px){
+					margin-top: 5px;
+					margin-bottom: 40px;
+			}
+
+
+			@media only screen and (min-width:768px){
+					margin-top: 30px;
+					margin-bottom: 18px;
+			}
+
+			@media only screen and (min-width:1024px){
+
+			}
+
+			@media only screen and (min-width:1440px){
+					margin-top: 30px;
+					margin-bottom: 40px;
+			}
+
+}/* yu-widget */

@@ -1,0 +1,55 @@
+/*
+@import "@{path-var}/variable.less";
+@import "@{path-var}/color.less";
+@import "@{path-mixin}/parent-inherit.less";
+*/
+
+/* Карточка состоит из  img -H - p */
+/* 25.03.2020 */
+/* emmet */
+/* c{ yu-widget-card }+ .yu-widget-card>(.container-img>img[src="img/img.png"])+(.titul>h2(lorem5))+(.text>p(lorem10)) */
+
+.yu-widget-card(){
+.default-perents();	/* parent-inherit.less */
+
+/* variable */
+	@color-text:@black;
+	@bg-color:@white;
+/*default Parent*/
+	display:flex;
+	flex-flow:row wrap;
+	flex:1 1 300px;
+	justify-content: center;
+    align-content: baseline;
+
+
+/*default child */
+		.container-img{
+		.default-perents();/* parent-inherit.less */
+		background-color:@blue;
+		width:200px;
+		height:200px;
+		border-radius:50%;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		
+			img{
+				.default-perents();/* parent-inherit.less */	
+				width:auto;
+				max-width:auto;
+				height:auto;
+				background-color:unset;
+			}
+		}
+
+		.titul{
+			.default-perents();/* parent-inherit.less */	
+		}
+
+		.text{
+			.default-perents();/* parent-inherit.less */
+		}
+		/*media */
+	
+}

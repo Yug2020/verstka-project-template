@@ -1,23 +1,27 @@
-body{
-	background-color:#333;
-	color:#ffff00;
-	
-	}
-*{
-border:1px solid black;
-}	
-	
-h1{
+/*Theme YU-Standart*/
+@import "var/path.less";
+ 
+@import "@{path-var}/variable.less";
 
+@import "@{path-var}/color.less";
 
-	font-size:15px;/**/
-	}
-	
-	.yu-section{
-		display: flex;
-	}
-	
-	.yu-section * {
-		flex:1 1 30px;
-		
-	}
+@import "@{path-mixin}/parent-inherit.less";
+
+@import "debugger.less";
+
+/*******************************/
+/* MEDIA 					   */
+/*******************************/
+/*1 media-global - on media-theme - off  тема изменяет размеры и отступпы по всему сайту тегов p,h span им т.д.*/
+
+/*2 media-global - off media-theme - on тема изменяет размеры и отступпы по в пределах секции */
+
+/*3 media-global - coment media-theme - coment если обе темы закоментированны  тема подчиняется не своим медия*/
+
+//+@import "@{path-media}/media-global.less";/*изменяет свойства p,h и т.д. в пределах html*/
+@import "@{path-media}/media-theme.less";/*изменяет свойства p,h и т.д. в пределах yu-section */
+
+/*******************************/
+/* THEME 					   */
+/*******************************/
+@import "@{path-theme}/yu-default.less";/*изменяет свойства p,h и т.д. в пределах yu-section */

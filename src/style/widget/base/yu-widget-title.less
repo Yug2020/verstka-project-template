@@ -1,0 +1,42 @@
+/* как вызывать стиль
+	.yu-widget-title{
+		.yu-widget-title();
+	}	
+*/
+/*
+например 
+ #section-N .column .yu-widget-title{
+		.yu-widget-title();
+		и что еще надо
+	} 
+
+*/	
+	/*  НЕ Изменять H1..H5 DIV и т.д.*/
+	
+/*	
+@import "../@{path-var}/variable.less";
+@import "../@{path-var}/color.less";
+@import "../@{path-mixin}/parent-inherit.less";
+*/
+
+//* Карточка состоит из  img -H - p */
+//* 27.03.2020 */
+//* emmet */
+//* c{ yu-widget-title }+.yu-widget.yu-widget-title>nr+h1(lorem5)*/
+
+.yu-widget-title(){
+//* MIXIN Default */
+.default-perents();
+//* variable */
+
+//*default Parent*/
+	display:flex;
+	flex-flow:column nowrap;
+
+
+//*default child */
+	
+		
+		/*media */
+	
+}

@@ -1,0 +1,102 @@
+@import "../@{path-var}/variable.less";
+//@import "./var/variable.less";
+/* MEDIA */
+
+@media only screen and (max-width:319px){
+	.yu-colum {
+		padding-left:@p-padding-lr-mobile-min;/**/
+		padding-right:@p-padding-lr-mobile-min;
+	}
+
+	
+	[id^="yu-"] .yu-content {
+		padding-left: @otsup-mobile;
+		padding-right: @otsup-mobile;
+	
+	
+/* Default */
+	@import "../@{path-mixin}/max-319.less";
+	
+	
+/* set h1,..h5,p,ul,li,span...*/	
+@import (multiple) "../@{path-mixin}/yu-template-style.less";
+}
+/*finishyu*/
+}
+
+@media only screen and (min-width:320px){
+	/*mediayu*/
+	.yu-colum {
+		padding-left:@p-padding-lr-mobile;
+		padding-right:@p-padding-lr-mobile;
+	
+	}
+	
+	
+	[id^="yu-"] .yu-content {
+		padding-left: @otsup-mobile;
+		padding-right: @otsup-mobile;
+	
+/* Default */
+	@import "../@{path-mixin}/min-320.less";
+	
+/* set h1,..h5,p,ul,li,span...*/	
+@import (multiple) "../@{path-mixin}/yu-template-style.less";	
+}
+/*finishyu*/
+}
+
+
+@media only screen and (min-width:768px){
+	.yu-colum {
+		/*padding-left:@p-padding-lr-pad;/**/
+		padding-right:@p-padding-lr-pad;/**/
+	
+	}
+	
+/* #yu-1..n*/		
+	[id^="yu-"] .yu-content {
+		padding-left: @otsup-pad;
+		padding-right: @otsup-pad;
+	
+/* Default */
+	@import "../@{path-mixin}/min-768.less";
+		
+/* set h1,..h5,p,ul,li,span...*/	
+@import (multiple) "../@{path-mixin}/yu-template-style.less";
+}
+/*finishyu*/		
+}
+
+@media only screen and (min-width:1024px){
+	.yu-colum {
+		padding-left:@p-padding-lr-desktop;
+		padding-right:@p-padding-lr-desktop;
+	
+	}
+		
+	[id^="yu-"] .yu-content {
+		padding-left: @otsup-desktop;
+		padding-right: @otsup-desktop;
+	
+/* Default */
+	@import "../@{path-mixin}/min-1024.less";
+		
+/* set h1,..h5,p,ul,li,span...*/	
+@import (multiple) "../@{path-mixin}/yu-template-style.less";
+}
+/*finishyu*/		
+}
+
+@media only screen and (min-width:1440px){
+	[id^="yu-"] .yu-content {
+		padding-left: @otsup-desktop;
+		padding-right: @otsup-desktop;
+/* Default */
+	@import "../@{path-mixin}/min-1440.less";
+		
+/* set h1,..h5,p,ul,li,span...*/	
+/*@import (multiple) "yu-template-style.less";/**/
+}
+/*finishyu*/		
+}
