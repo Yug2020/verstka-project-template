@@ -51,6 +51,7 @@ gulp.task('webserver', done=> {
 //	imgMin
 //	imgToPNG
 //	imgResize
+//  imgCopy
 
 // JS
 // 	jsCompress
@@ -64,6 +65,10 @@ gulp.task('webserver', done=> {
 //	cleanJS
 //	cleanHTML
 
+// Build IMG
+gulp.task('img:build',gulp.series(
+	'imgCopy'
+	));
 
 // Build CSS
 gulp.task('css:build',gulp.series(
@@ -86,7 +91,8 @@ gulp.task('html:build',gulp.series(
 
 gulp.task('build',gulp.parallel(
     'html:build',
-    'css:build'
+    'css:build',
+    'img:build'
 ));
 
 //********************************//
@@ -94,6 +100,7 @@ gulp.task('build',gulp.parallel(
 gulp.task('watch', function(){
     gulp.watch(path0.watch.html,gulp.series('html:build'));
     gulp.watch(path0.watch.style,gulp.series('css:build'));
+    gulp.watch(path0.watch.img,gulp.series('img:build'));
    // gulp.watch(path0.watch.all,gulp.series('webserver'));
 	//browserSync.watch(path0.watch.all).on('change', browserSync.reload);
 	/* gulp 3

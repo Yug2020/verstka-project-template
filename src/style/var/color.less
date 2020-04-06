@@ -1,10 +1,92 @@
-// основной текст
-@text-main:#000;
+// основной текст (yu-widget-text)
+@text-main-color1:#000;
+@text-main-color2:#000;
+@text-main-color3:#000;
+@text-main-color4:#000;
+@text-main-color5:#000;
+// дополнительный цвет (yu-widget-text)
+@text-secondary-color1:#000;
+@text-secondary-color2:#000;
+@text-secondary-color3:#000;
+@text-secondary-color4:#000;
+@text-secondary-color5:#000;
 // акцент
-@akcent:#ff00ff;
+@akcent1:#11679b;
+@akcent2:#ff00ff;
+@akcent3:#ff00ff;
+@akcent4:#ff00ff;
+@akcent5:#ff00ff;
 // основной цвет BG
-@bg-main:#fff;
+@bg-color1:#fff;
+@bg-color2:#fff;
+@bg-color3:#fff;
+@bg-color4:#fff;
+@bg-color5:#fff;
+
 
 
 //**
+.bold1{
+	font-weight:700 !important;
+}
+
+.bold2{
+	font-weight:900 !important;
+}
 /********************************/
+span{
+	.default-perents();/*  mixin.less */
+}
+// mixin
+.set-color-text(@value){
+	color:@value !important;
+}
+
+.set-color-bg(@value){
+	background-color:@value !important;
+}
+
+// css
+.set-main-color1,.black{
+	.set-color-text(@text-main-color1);
+}
+
+.set-main-color2{
+	.set-color-text(@text-main-color2);
+}
+
+.set-main-color3{
+	.set-color-text(@text-main-color3);
+}
+
+.set-main-color4{
+	.set-color-text(@text-main-color4);
+}
+
+.set-main-color5{
+	.set-color-text(@text-main-color5);
+}
+//*** Secondary 
+
+//*** Akcent
+.set-akcent-color1,.blue{
+	.set-color-text(@akcent1);
+}
+
+.set-akcent-color2{
+	.set-color-text(@akcent2);
+}
+
+.set-akcent-color3{
+	.set-color-text(@akcent3);
+}
+
+.set-akcent-color4{
+	.set-color-text(@akcent4);
+}
+
+.set-akcent-color5{
+	.set-color-text(@akcent5);
+}
+
+//*** Back Ground

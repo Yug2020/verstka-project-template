@@ -25,23 +25,27 @@
 
 /* ELEMENT */
 .yu-widget-img(){
-.default-perents();	/*?*//* parent-inherit.less */
+	.default-perents();	/*?*//* parent-inherit.less */
 
     display: flex;
     /* display: block; */
     /* flex-flow: row wrap; */
     justify-content: center;
-    width: 100%;
-    height: auto;
-    flex: 1 1 100%;
+    /*width: 100%;/**/
+		padding-left:0px;
+	padding-right:0px;
+	
+    /*height: auto;/**/
+    /*flex: 1 1 auto;/**/
 /* default */	
 	img{
 	.default-perents();	/* parent-inherit.less */
 		/*width:100vw;/**/
-		width:100%;/**/
-		/*max-width:auto;/**/
+		/*min-width:inherit;/**/
+		width:auto;
+		max-width:100%;/**/
 		height:auto;
-		object-fit:scale-down;
+		object-fit:scale-down;/**/
 	}
 
 /* разные свойства*/	
@@ -105,7 +109,7 @@
 			}
 
 			@media only screen and (min-width:1024px){
-			    height: 10px;/*для чего то нужно */
+			   /* height: 10px;/*для чего то нужно */
 					&.full-screen-mobile{
 					width:100%;
 					/*justify-content:left;/**/

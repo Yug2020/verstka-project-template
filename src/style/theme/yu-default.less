@@ -13,8 +13,8 @@
 		/* наследуемые свойства */
 		box-sizing: border-box;
 				font-family: @yu-font-family; /*open sans*/
-				color: @text-main;
-				background-color: @bg-main;
+				color: @text-main-color1;
+				background-color: @bg-color1;
 		border: @debug-border solid black;
 	}
 	/*CONTENT*/	
@@ -23,19 +23,27 @@
 			width:100%;
 			position:relative;
 			display:flex;
-			flex-flow:column nowrap;/*22.03.2020*/
-			align-items:center;
+			flex-flow:row wrap;/*22.03.2020*/
+			align-items:strench;
 			justify-content:center;
 				.default-perents();
 		}
 		
 						/*WIDGET*/	
 					.default-widget(){
+					/* COLUMS */
+					flex:1 1 420px;/* minimum wrap*/
+					max-width:100%;/**/
 						margin:0;
 						padding:0; 
 						display:flex;
 						flex-flow:row wrap;
 							.default-perents();
+					}
+					
+					.last-item{
+					/*	max-width:50%;/**/
+						
 					}
 
 /* Imports Section 100% */
@@ -78,7 +86,7 @@
 				
 				}/*yu-widget-text*/
 				
-				.yu-widget-img{
+				[class*="yu-widget-img"]{
 					.yu-widget-img();/*yu-widget-img.less*/
 				
 				}/*yu-widget-img*/	

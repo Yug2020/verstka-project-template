@@ -10,7 +10,7 @@ const path = {
         html: 'src/index.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
         js: 'src/js/main.js',//В стилях и скриптах нам понадобятся только main файлы
         style: 'src/style/style.less',
-        img: 'src/img/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
+        img: 'src/**/*.{jpg,jpeg,png,svg,ico}', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
         imgresize: 'src/img/resize/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
         fonts: 'src/fonts/**/*.*'
     },
@@ -18,7 +18,7 @@ const path = {
          html: 'src/**/*.html',
 		   js: 'src/js/**/*.js',
         style: 'src/style/**/*.less',
-          img: 'src/img/**/*.*',
+          img: 'src/**/*.{jpg,jpeg,png,svg,ico}',
         fonts: 'src/fonts/**/*.*'
     },
     clean: {

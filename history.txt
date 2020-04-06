@@ -1,0 +1,12 @@
+05.04.2020
+{problem}
+	tag span font-size не наследовал размер родителя
+{action1}
+	edit file : ...mixin/yu-template-style.less
+		в span {}
+			заменил font-size:@span-size; // min-N.les
+			на
+			font-size:inherit;
+			
+{solution}
+свойства наследуюются от родителя а не от media-query - OK

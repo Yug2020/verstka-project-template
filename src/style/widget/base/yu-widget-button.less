@@ -27,39 +27,103 @@
 //* MIXIN Default */
 
 //* variable */
-	@color-text:@text-main;
-	@bg-color:@bg-main;
+	@color-text:@text-main-color1;
+	@bg-color:@bg-color1;
 	
 //*default Parent*/
 	display:flex;
-	flex-flow:column nowrap;
+	/*flex-flow:column nowrap;/**/
+	align-self:center;
 
 
 //*default child */
 		.yu-button{
 			.default-perents();/*parent-inherit*/
-			.button-read();
+			/*.button-read();/**/
 				
-		}
+		
 		/*media */
-	
+			@media only screen and (max-width:319px){
+				@import (multiple) "../../@{path-mixin}/max-319.less";
+				font-size:@h5-size;
+				line-height:@h5-height;
+					
+			}
+			
+			@media only screen and (min-width:320px){
+				@import (multiple) "../../@{path-mixin}/min-320.less";
+				font-size:@h5-size;
+				line-height:@h5-height;
+					
+			}
+			
+			@media only screen and (min-width:768px){
+				@import (multiple) "../../@{path-mixin}/min-768.less";
+				font-size:@h5-size;
+				line-height:@h5-height;
+					
+			}
+			
+			@media only screen and (min-width:1024px){
+				@import (multiple) "../../@{path-mixin}/min-1024.less";
+				font-size:@h5-size;
+				line-height:@h5-height;
+					
+			}
+			
+			@media only screen and (min-width:1440px){
+				@import (multiple) "../../@{path-mixin}/min-1440.less";
+				font-size:@h5-size;
+				line-height:@h5-height;
+					
+			}
+			
+
+
+
+		/* Element */	
+
+			&.button-read{
+				display:block;
+				width:100%;
+				max-width:150px;
+				background-color:@blue-text-dark;
+				font-size:18px;/* media */
+				text-align:center;
+				line-height:36px;
+				padding:9px 0px;
+				color:@white;
+				/*margin-top:50px;/**/
+				/*margin-bottom:45px;/**/
+				margin-left:auto;
+				margin-right:auto;
+				
+				/* @MEDIA*/
+					@media only screen and (max-width:319px){
+						padding-top:10px;/**/
+						padding-bottom:10px;/**/					
+					}
+					
+					@media only screen and (min-width:320px){
+						padding-top:10px;/**/
+						padding-bottom:10px;/**/					
+					}
+					
+					@media only screen and (min-width:768px){
+						padding-top:10px;/**/
+						padding-bottom:10px;/**/						
+					}
+					
+					@media only screen and (min-width:1024px){
+						padding-top:10px;/**/
+						padding-bottom:10px;/**/						
+					}
+					
+					@media only screen and (min-width:1440px){
+						padding-top:5px;/**/
+						padding-bottom:5px;/**/						
+					}		
+					
+				}/*&.button-read*/
+			}/*.yu-button*/
 }
-
-
-/* Element */	
-
-	.button-read(){
-		display:block;
-		width:100%;
-		max-width:150px;
-		background-color:@blue-text-dark;
-		font-size:18px;/* media */
-		text-align:center;
-
-		padding:9px 0px;
-		color:@white;
-		/*margin-top:50px;/**/
-		/*margin-bottom:45px;/**/
-		margin-left:auto;
-		margin-right:auto;
-	}

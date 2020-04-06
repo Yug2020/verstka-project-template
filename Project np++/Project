@@ -1,13 +1,58 @@
 <NotepadPlus>
     <Project name="yu-theme">
-        <Folder name="Build" />
+        <Folder name="Build">
+            <File name="C:\! JOB IT\! Verstka\Template\min\build\css\style.css" />
+        </Folder>
         <Folder name="src">
-            <File name="C:\! JOB IT\! Verstka\Template\min\src\style\style.less" />
-            <Folder name="var">
-                <File name="C:\! JOB IT\! Verstka\Template\min\src\style\_color.less" />
-                <File name="C:\! JOB IT\! Verstka\Template\min\src\style\_variable.less" />
+            <Folder name="Theme">
+                <File name="C:\! JOB IT\! Verstka\Template\min\src\style\theme\yu-default.less" />
             </Folder>
-            <Folder name="mixin" />
+            <File name="C:\! JOB IT\! Verstka\Template\min\src\style\style.less" />
+            <File name="C:\! JOB IT\! Verstka\Template\min\src\style\debugger.less" />
+            <File name="C:\! JOB IT\! Verstka\Template\min\history.txt" />
+            <Folder name="mixin">
+                <File name="C:\! JOB IT\! Verstka\Template\min\src\style\mixin\parent-inherit.less" />
+                <File name="C:\! JOB IT\! Verstka\Template\min\src\style\mixin\yu-template-style.less" />
+                <Folder name="media">
+                    <File name="C:\! JOB IT\! Verstka\Template\min\src\style\mixin\max-319.less" />
+                    <File name="C:\! JOB IT\! Verstka\Template\min\src\style\mixin\min-320.less" />
+                    <File name="C:\! JOB IT\! Verstka\Template\min\src\style\mixin\min-768.less" />
+                    <File name="C:\! JOB IT\! Verstka\Template\min\src\style\mixin\min-1024.less" />
+                    <File name="C:\! JOB IT\! Verstka\Template\min\src\style\mixin\min-1440.less" />
+                </Folder>
+            </Folder>
+            <Folder name="var">
+                <File name="C:\! JOB IT\! Verstka\Template\min\src\style\var\path.less" />
+                <File name="C:\! JOB IT\! Verstka\Template\min\src\style\var\color.less" />
+                <File name="C:\! JOB IT\! Verstka\Template\min\src\style\var\variable.less" />
+            </Folder>
+            <Folder name="media">
+                <File name="C:\! JOB IT\! Verstka\Template\min\src\style\media\media-global.less" />
+                <File name="C:\! JOB IT\! Verstka\Template\min\src\style\media\media-theme.less" />
+            </Folder>
+            <Folder name="section">
+                <File name="C:\! JOB IT\! Verstka\Template\min\src\style\section\yu-section.less" />
+                <File name="C:\! JOB IT\! Verstka\Template\min\src\style\section\yu-content.less" />
+                <File name="C:\! JOB IT\! Verstka\Template\min\src\style\section\yu-widget.less" />
+            </Folder>
+            <Folder name="widget">
+                <Folder name="base">
+                    <File name="C:\! JOB IT\! Verstka\Template\min\src\style\widget\base\yu-widget-title.less" />
+                    <File name="C:\! JOB IT\! Verstka\Template\min\src\style\widget\base\yu-widget-text.less" />
+                    <File name="C:\! JOB IT\! Verstka\Template\min\src\style\widget\base\yu-widget-img.less" />
+                    <File name="C:\! JOB IT\! Verstka\Template\min\src\style\widget\base\yu-widget-button.less" />
+                </Folder>
+                <Folder name="standart">
+                    <File name="C:\! JOB IT\! Verstka\Template\min\src\style\widget\standart\yu-widget-container.less" />
+                    <File name="C:\! JOB IT\! Verstka\Template\min\src\style\widget\standart\yu-widget-menu-button-img.less" />
+                    <File name="C:\! JOB IT\! Verstka\Template\min\src\style\widget\standart\yu-widget-menu-button.less" />
+                    <File name="C:\! JOB IT\! Verstka\Template\min\src\style\widget\standart\yu-widget-button-img.less" />
+                    <File name="C:\! JOB IT\! Verstka\Template\min\src\style\widget\standart\yu-widget-card.less" />
+                </Folder>
+            </Folder>
+            <Folder name="include">
+                <File name="C:\! JOB IT\! Verstka\Template\min\src\include\section1\section1.html" />
+            </Folder>
         </Folder>
     </Project>
 </NotepadPlus>
